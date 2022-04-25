@@ -70,7 +70,7 @@ class Tesla : Car() {
 
     private suspend fun prepareCar(currentCar: Int, numberOfCars: Int): Long {
         return measureTimeMillis {
-            super.build("Car $currentCar")
+            super.build("Car ${currentCar + 1}")
             println("${currentCar + 1}/$numberOfCars ready for delivery")
             println("🚗".repeat(currentCar + 1))
             println()
