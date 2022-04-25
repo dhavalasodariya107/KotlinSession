@@ -62,7 +62,9 @@ class Tesla : Car() {
                 job.join()
             }
         }
-        val singleCarDuration = arrayOfMillis.sum() / arrayOfMillis.count().toLong()
+
+//        val singleCarDuration = arrayOfMillis.sum() / arrayOfMillis.count().toLong()
+        val singleCarDuration = arrayOfMillis.average().toLong()
         onComplete.invoke(Pair(totalDuration, (singleCarDuration)))
     }
 
